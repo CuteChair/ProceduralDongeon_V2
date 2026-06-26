@@ -41,9 +41,15 @@ public class RoomData : MonoBehaviour
                 }
             }
 
-            Vector3 newRotation = new Vector3(0, 90f, 0);
+            float currYRot = transform.localRotation.eulerAngles.y;
 
-            transform.rotation = Quaternion.Euler(newRotation);
+            print("Current y rotation : " + currYRot);
+
+            float rotAmount = (currYRot + 90f) % 360;
+
+            print("New rotation value : " + rotAmount);
+
+            transform.rotation = Quaternion.Euler(0, rotAmount, 0); 
             
         }
     }
