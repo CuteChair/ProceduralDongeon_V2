@@ -29,4 +29,19 @@ public static class DirectionHelper
         return newDirection;
 
     }
+
+    public static float GetRandomQuaternionEuler()
+    {
+        int newDirection = Random.Range(0, 4);
+
+        switch (newDirection)
+        {
+            case 0: return 0f;
+            case 1: return 90f;
+            case 2: return 180f;
+            case 3: return 270f;
+        }
+
+        return 0f;
+    }
 }

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class RoomData : MonoBehaviour
+public class RoomInstance : MonoBehaviour
 {
 
     /// <summary>
@@ -35,7 +35,7 @@ public class RoomData : MonoBehaviour
 
             foreach (GameObject tileConnector in TileConnectorsArray)
             {
-                if (tileConnector.TryGetComponent<DoorTileData>(out DoorTileData doorTileData))
+                if (tileConnector.TryGetComponent<DoorTileInstance>(out DoorTileInstance doorTileData))
                 {
                     print($"{tileConnector.name}'s direction : {DirectionHelper.GetTileDirectionBasedOnRoomDirection(doorTileData.DefaultDirection, CurrentDirection)}");
                 }

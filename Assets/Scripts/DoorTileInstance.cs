@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class DoorTileData : MonoBehaviour
+public class DoorTileInstance : MonoBehaviour
 {
     /// <summary>
     /// Script that holds information about : 
